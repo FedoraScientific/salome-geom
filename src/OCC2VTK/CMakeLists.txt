@@ -34,8 +34,9 @@ ADD_DEFINITIONS(
   )
 
 # libraries to link to
+FIND_LIBRARY(VTK_FILTERS_CORE vtkFiltersCore ${VTK_LIBRARY_DIR})
 SET(_link_LIBRARIES
-  vtkFiltersCore
+  ${VTK_FILTERS_CORE}
   ${CAS_KERNEL} 
   ${CAS_TKMesh} ${CAS_TKTopAlgo}
   ${CAS_MODELER}

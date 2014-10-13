@@ -66,6 +66,7 @@ ADD_DEFINITIONS(
 ENDIF()
 
 # libraries to link to
+FIND_LIBRARY(VTK_IO_LEGACY vtkIOLegacy ${VTK_LIBRARY_DIR})
 SET(_link_engine_LIBRARIES
   ${CAS_TKVTK}
   ${KERNEL_SALOMELocalTrace}
@@ -74,7 +75,7 @@ SET(_link_engine_LIBRARIES
   SalomeIDLVTKPlugin
   GEOMEngine
   GEOMClient
-  vtkIOLegacy
+  ${VTK_IO_LEGACY}
   OCC2VTK
   )
   
