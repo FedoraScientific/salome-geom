@@ -35,7 +35,7 @@ SALOME_GENERATE_ENVIRONMENT_SCRIPT(plugins_cmd env_script "${PYTHON_EXECUTABLE}"
 # Install a script
 SALOME_INSTALL_SCRIPTS(collect_geom_methods.py ${SALOME_INSTALL_BINS})
 
-SET(f "$ENV{KERNEL_ROOT_DIR}/bin/salome/prepare_generating_doc.py")
+SET(f "${KERNEL_ROOT_DIR}/bin/salome/prepare_generating_doc.py")
 IF(WIN32)
   STRING(REPLACE "/" "\\" f ${f})
 ENDIF(WIN32)
