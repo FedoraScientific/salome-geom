@@ -22,6 +22,9 @@ INCLUDE(${VTK_USE_FILE})
 
 # --- options ---
 
+FIND_LIBRARY(VTK_RENDERING_MATPLOTLIB vtkRenderingMatplotlib ${VTK_LIBRARY_DIR})
+FIND_LIBRARY(VTK_INTERACTION_STYLE vtkInteractionStyle ${VTK_LIBRARY_DIR})
+
 # additional include directories
 INCLUDE_DIRECTORIES(
   ${VTK_INCLUDE_DIRS}
@@ -54,8 +57,8 @@ SET(_link_LIBRARIES
   ${GUI_SalomeObject}
   ${GUI_SVTK}
   ${QT_QTCORE_LIBRARY}
-  vtkRenderingMatplotlib
-  vtkInteractionStyle
+  ${VTK_RENDERING_MATPLOTLIB}
+  ${VTK_INTERACTION_STYLE}
   GEOMUtils
   #${VTK_LIBRARIES}
   )
